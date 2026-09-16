@@ -6,6 +6,7 @@ import {
   Menu,
   Heart,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
