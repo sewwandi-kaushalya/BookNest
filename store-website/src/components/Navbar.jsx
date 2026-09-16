@@ -13,6 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useCart } from "../context/cartContextValue";
 import { useWishlist } from "../context/WishlistContext";
+import logo from "../assets/logo.jpg";
 
 function Navbar() {
   const { cartCount } = useCart();
@@ -58,8 +59,12 @@ function Navbar() {
             onClick={closeMobileMenu}
             className="flex items-center gap-3"
           >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-xl shadow-sm">
-              📚
+            <div className="flex ">
+              <img
+                src={logo}
+                alt="BookNest Logo"
+                className="h-12 w-12 object-contain rounded-full"
+              />
             </div>
 
             <div>

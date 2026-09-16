@@ -1,4 +1,9 @@
 import { AtSign, Camera, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import logo from "../assets/logo.jpg";
+import facebook from "../assets/facebook.jpg";
+import whatsapp from "../assets/whatsapp.jpg";    
+import twitter from "../assets/twitter.jpg";
+
 
 function Footer() {
   return (
@@ -14,8 +19,14 @@ function Footer() {
           <div className="lg:pr-8">
 
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-lg">
-                📚
+              <div className="flex ">
+                  <div className="flex ">
+              <img
+                src={logo}
+                alt="BookNest Logo"
+                className="h-12 w-12 object-contain rounded-full"
+              />
+            </div>
               </div>
 
               <h2 className="text-xl font-bold text-slate-900">
@@ -29,16 +40,28 @@ function Footer() {
             </p>
 
             <div className="mt-6 flex gap-2">
-              <button className="rounded-full bg-slate-100 p-2.5 text-slate-600 transition hover:bg-slate-900 hover:text-white">
-                <AtSign size={17} />
+              <button className="rounded-full p-2.5 transform transition hover:scale-105">
+                <img
+                  src={facebook}
+                  alt="Facebook"
+                  className="h-8 w-8 object-contain"
+                />
               </button>
 
-              <button className="rounded-full bg-slate-100 p-2.5 text-slate-600 transition hover:bg-slate-900 hover:text-white">
-                <Camera size={17} />
+              <button className="rounded-full p-2.5 transform transition hover:scale-105">
+                <img
+                  src={whatsapp}
+                  alt="WhatsApp"
+                  className="h-8 w-8 object-contain"
+                />
               </button>
 
-              <button className="rounded-full bg-slate-100 p-2.5 text-slate-600 transition hover:bg-slate-900 hover:text-white">
-                <MessageCircle size={17} />
+              <button className="rounded-full p-2.5 transform transition hover:scale-105">
+                <img
+                  src={twitter}
+                  alt="Twitter"
+                  className="h-8 w-8 object-contain"
+                />
               </button>
             </div>
 

@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+import book_store from "../assets/book-store.jpg";
 
 function Hero() {
   return (
@@ -167,6 +168,12 @@ function Hero() {
 
           {/* Decorative ring */}
           <div className="absolute h-[400px] w-[400px] rounded-full border border-slate-300/60 sm:h-[470px] sm:w-[470px]" />
+            {/* Book Image */}
+            <img
+              src={book_store}
+              alt="Book Store"
+              className="absolute z-20 h-[300px] w-[200px] object-contain sm:h-[450px] sm:w-[350px] rounded-full transform transition duration-500 hover:scale-105"
+            />
 
           {/* =================================================
               MAIN BOOK
