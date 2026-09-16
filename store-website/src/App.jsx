@@ -15,6 +15,8 @@ import Login from "./pages/login";
 import Register from "./pages/Register";
 import Wishlist from "./pages/Wishlist";
 import { WishlistProvider } from "./context/WishlistContext";
+import CategoriesPage from "./pages/CategoriesPage";
+import About from "./pages/About";
 
 function Home() {
   return (
@@ -50,6 +52,16 @@ function App() {
             <Route path="/cart" element={<Cart />} />
 
             <Route path="/checkout" element={<Checkout />} />
+<Route
+  path="/categories"
+  element={<CategoriesPage />}
+/>
+
+<Route
+  path="/about"
+  element={<About />}
+/>
+
 <Route path="/wishlist" element={<Wishlist />} />
 
 <Route path="/login" element={<Login />} /> 

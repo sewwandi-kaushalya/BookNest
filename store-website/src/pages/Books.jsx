@@ -6,29 +6,37 @@ import {
   X,
 } from "lucide-react";
 
-import {
-  useSearchParams,
-} from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import BookCard from "../components/BookCard";
 import { books } from "../data/books";
 
 function Books() {
   // =========================================================
-  // URL SEARCH PARAMETER
+  // URL SEARCH PARAMETERS
   // =========================================================
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] =
+    useSearchParams();
 
-  const urlSearch = searchParams.get("search") || "";
+  const urlSearch =
+    searchParams.get("search") || "";
+
+  const urlCategory =
+    searchParams.get("category") || "All";
 
   // =========================================================
   // STATES
   // =========================================================
 
-  const [search, setSearch] = useState(urlSearch);
-  const [category, setCategory] = useState("All");
-  const [sort, setSort] = useState("default");
+  const [search, setSearch] =
+    useState(urlSearch);
+
+  const [category, setCategory] =
+    useState(urlCategory);
+
+  const [sort, setSort] =
+    useState("default");
 
   // =========================================================
   // CATEGORIES
@@ -42,12 +50,20 @@ function Books() {
   ];
 
   // =========================================================
-  // UPDATE SEARCH WHEN URL CHANGES
+  // UPDATE STATES WHEN URL CHANGES
   // =========================================================
 
   useEffect(() => {
     setSearch(urlSearch);
-  }, [urlSearch]);
+
+    // Check whether URL category exists
+    // in our available categories
+    if (categories.includes(urlCategory)) {
+      setCategory(urlCategory);
+    } else {
+      setCategory("All");
+    }
+  }, [urlSearch, urlCategory]);
 
   // =========================================================
   // SEARCH CHANGE
@@ -58,13 +74,40 @@ function Books() {
 
     setSearch(value);
 
+    const params = new URLSearchParams(
+      searchParams
+    );
+
     if (value.trim()) {
-      setSearchParams({
-        search: value,
-      });
+      params.set("search", value);
     } else {
-      setSearchParams({});
+      params.delete("search");
     }
+
+    setSearchParams(params);
+  };
+
+  // =========================================================
+  // CATEGORY CHANGE
+  // =========================================================
+
+  const handleCategoryChange = (selectedCategory) => {
+    setCategory(selectedCategory);
+
+    const params = new URLSearchParams(
+      searchParams
+    );
+
+    if (selectedCategory === "All") {
+      params.delete("category");
+    } else {
+      params.set(
+        "category",
+        selectedCategory
+      );
+    }
+
+    setSearchParams(params);
   };
 
   // =========================================================
@@ -73,6 +116,25 @@ function Books() {
 
   const clearSearch = () => {
     setSearch("");
+
+    const params = new URLSearchParams(
+      searchParams
+    );
+
+    params.delete("search");
+
+    setSearchParams(params);
+  };
+
+  // =========================================================
+  // CLEAR ALL FILTERS
+  // =========================================================
+
+  const clearFilters = () => {
+    setSearch("");
+    setCategory("All");
+    setSort("default");
+
     setSearchParams({});
   };
 
@@ -106,17 +168,17 @@ function Books() {
       );
     })
     .sort((a, b) => {
-      // Price low → high
+      // Price: Low → High
       if (sort === "price-low") {
         return a.price - b.price;
       }
 
-      // Price high → low
+      // Price: High → Low
       if (sort === "price-high") {
         return b.price - a.price;
       }
 
-      // Highest rating
+      // Highest Rating
       if (sort === "rating") {
         return b.rating - a.rating;
       }
@@ -209,8 +271,9 @@ function Books() {
               onChange={(e) =>
                 setSort(e.target.value)
               }
-              className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 outline-none"
+              className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 outline-none transition focus:border-slate-900"
             >
+
               <option value="default">
                 Sort by
               </option>
@@ -226,6 +289,7 @@ function Books() {
               <option value="rating">
                 Highest Rated
               </option>
+
             </select>
 
           </div>
@@ -243,7 +307,7 @@ function Books() {
               key={item}
               type="button"
               onClick={() =>
-                setCategory(item)
+                handleCategoryChange(item)
               }
               className={`whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition ${
                 category === item
@@ -258,11 +322,12 @@ function Books() {
         </div>
 
         {/* ===================================================
-            RESULT COUNT
+            ACTIVE FILTERS + RESULT COUNT
         ==================================================== */}
 
-        <div className="mb-8 mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mb-8 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 
+          {/* Result Count */}
           <p className="text-sm text-slate-500">
 
             Showing{" "}
@@ -277,18 +342,24 @@ function Books() {
 
           </p>
 
-          {/* Show active search */}
-          {search && (
-            <p className="text-sm text-slate-500">
+          {/* Active Filters */}
+          <div className="flex flex-wrap items-center gap-2">
 
-              Search:{" "}
-
-              <span className="font-semibold text-slate-900">
-                "{search}"
+            {/* Category */}
+            {category !== "All" && (
+              <span className="rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-white">
+                {category}
               </span>
+            )}
 
-            </p>
-          )}
+            {/* Search */}
+            {search && (
+              <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-slate-600">
+                Search: "{search}"
+              </span>
+            )}
+
+          </div>
 
         </div>
 
@@ -331,12 +402,7 @@ function Books() {
 
             <button
               type="button"
-              onClick={() => {
-                setSearch("");
-                setCategory("All");
-                setSort("default");
-                setSearchParams({});
-              }}
+              onClick={clearFilters}
               className="mt-6 rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
               Clear filters
@@ -352,4 +418,3 @@ function Books() {
 }
 
 export default Books;
-

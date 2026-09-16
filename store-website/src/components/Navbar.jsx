@@ -93,18 +93,19 @@ function Navbar() {
             </Link>
 
             <Link
-              to="/#categories"
-              className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
-            >
-              Categories
-            </Link>
+  to="/categories"
+  onClick={closeMobileMenu}
+  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+>
+  Categories
+</Link>
 
             <Link
-              to="/#about"
-              className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
-            >
-              About
-            </Link>
+  to="/about"
+  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+>
+  About
+</Link>
           </nav>
 
           {/* =====================================================
@@ -297,13 +298,13 @@ function Navbar() {
               </Link>
 
               {/* About */}
-              <Link
-                to="/#about"
-                onClick={closeMobileMenu}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
-              >
-                About
-              </Link>
+             <Link
+  to="/about"
+  onClick={closeMobileMenu}
+  className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+>
+  About
+</Link>
 
               {/* Wishlist */}
               <Link
