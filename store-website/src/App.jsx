@@ -8,8 +8,13 @@ import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
 import Books from "./pages/Books";
 import BookDetails from "./pages/BookDetails";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/cartContextValue";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Login from "./pages/login";
+import Register from "./pages/Register";
+import Wishlist from "./pages/Wishlist";
+import { WishlistProvider } from "./context/WishlistContext";
 
 function Home() {
   return (
@@ -25,6 +30,7 @@ function Home() {
 function App() {
   return (
     <CartProvider>
+      <WishlistProvider>
       <BrowserRouter>
         <div className="min-h-screen bg-white">
 
@@ -42,6 +48,13 @@ function App() {
             />
 
             <Route path="/cart" element={<Cart />} />
+
+            <Route path="/checkout" element={<Checkout />} />
+<Route path="/wishlist" element={<Wishlist />} />
+
+<Route path="/login" element={<Login />} /> 
+<Route path="/register" element={<Register />} />
+
           </Routes>
         </main>
 
@@ -49,7 +62,9 @@ function App() {
 
       </div>
     </BrowserRouter>
+     </WishlistProvider>
     </CartProvider>
+   
   );
 }
 

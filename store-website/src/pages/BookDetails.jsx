@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 import { books } from "../data/books";
-import { useCart } from "../context/CartContext"; 
+import { useCart } from "../context/cartContextValue";
 import { useNavigate } from "react-router-dom";
 
 function BookDetails() {

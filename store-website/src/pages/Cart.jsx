@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag } from "lucide-react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/cartContextValue";
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
@@ -145,9 +145,7 @@ function Cart() {
               </div>
             </div>
 
-            <button className="mt-7 w-full rounded-full bg-slate-950 py-3.5 text-sm font-semibold text-white transition hover:bg-slate-800">
-              Proceed to Checkout
-            </button>
+            <Link to="/checkout" className="mt-7 block w-full rounded-full bg-slate-950 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-slate-800" > Proceed to Checkout </Link>
             
             <Link
               to="/books"
