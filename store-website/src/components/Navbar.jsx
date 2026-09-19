@@ -90,6 +90,13 @@ function Navbar() {
               Home
             </Link>
 
+                <Link
+  to="/about"
+  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+>
+  About
+</Link>
+
             <Link
               to="/books"
               className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
@@ -105,12 +112,7 @@ function Navbar() {
   Categories
 </Link>
 
-            <Link
-  to="/about"
-  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
->
-  About
-</Link>
+        
           </nav>
 
           {/* =====================================================

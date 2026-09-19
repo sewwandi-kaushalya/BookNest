@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
+import aboutImage from "../assets/about.jpg";
 
 function About() {
   return (
@@ -66,10 +67,13 @@ function About() {
           {/* Right Visual */}
           <div className="relative flex min-h-[400px] items-center justify-center">
 
-            <div className="absolute h-[300px] w-[300px] rounded-full bg-[#ded8ce] sm:h-[380px] sm:w-[380px]"></div>
-
+            <div className="absolute h-[300px] w-[300px] rounded-full bg-[#383837] sm:h-[380px] sm:w-[380px]"></div>
+<img src={aboutImage}
+              alt="About BookNest"
+              className="relative z-10 h-[300px] w-[300px] rounded-full object-cover sm:h-[380px] sm:w-[380px]"
+            />
             {/* Main Book */}
-            <div className="relative z-10 w-56 -rotate-6 rounded-lg bg-slate-950 p-6 shadow-2xl sm:w-64">
+            {/* <div className="relative z-10 w-56 -rotate-6 rounded-lg bg-slate-950 p-6 shadow-2xl sm:w-64">
 
               <div className="flex aspect-[3/4] flex-col justify-between border border-white/20 p-5">
 
@@ -95,10 +99,10 @@ function About() {
 
               </div>
 
-            </div>
+            </div> */}
 
             {/* Small Card */}
-            <div className="absolute right-2 top-10 z-20 w-36 rotate-12 rounded-xl bg-white p-4 shadow-xl sm:right-10 sm:w-40">
+            {/* <div className="absolute right-2 top-10 z-20 w-36 rotate-12 rounded-xl bg-white p-4 shadow-xl sm:right-10 sm:w-40">
 
               <div className="flex aspect-square flex-col justify-center rounded-lg bg-[#e9e4db] p-4">
 
@@ -117,7 +121,7 @@ function About() {
 
               </div>
 
-            </div>
+            </div> */}
 
             {/* Floating Badge */}
             <div className="absolute bottom-8 left-2 z-30 rounded-2xl bg-white px-5 py-4 shadow-xl sm:left-8">
