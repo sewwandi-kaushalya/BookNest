@@ -16,21 +16,25 @@ BookNest is a modern and responsive online bookstore frontend built with **React
 
 ### Home Page
 
-BookNest features a modern hero section, curated books, categories, and a clean bookstore experience.
+<img width="1920" height="3678" alt="image" src="https://github.com/user-attachments/assets/ee84fabb-91cd-41b7-b03b-8c17cc43dff0" />
+
 
 ### Books
 
-Browse the available collection with search, category filtering, and sorting options.
+<img width="1920" height="6707" alt="image" src="https://github.com/user-attachments/assets/13ba4a57-d30b-4a58-8b05-f5e0fb98453c" />
+
+
 
 ### Book Details
 
-View individual book information, ratings, prices, descriptions, and availability.
+<img width="1920" height="1746" alt="image" src="https://github.com/user-attachments/assets/feb46751-b6a3-4c17-919a-f2173ef60e07" />
+
+
 
 ### Cart & Checkout
 
-Add books to the shopping cart, update quantities, and complete a frontend demo checkout.
+<img width="1920" height="1462" alt="image" src="https://github.com/user-attachments/assets/7641fde5-6f33-49bb-90c8-4ae620682e0e" />
 
----
 
 ## ✨ Features
 
@@ -79,7 +83,7 @@ BookNest currently includes:
 | Context API | Cart & Wishlist State |
 | Git | Version Control |
 | GitHub | Source Code Hosting |
-| Vercel | Deployment |
+
 
 ---
 
