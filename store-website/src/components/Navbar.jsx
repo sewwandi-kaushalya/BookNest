@@ -46,12 +46,12 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="px-5 mx-auto max-w-7xl lg:px-8">
 
         {/* =====================================================
             MAIN NAVBAR
         ====================================================== */}
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
           <Link
@@ -63,7 +63,7 @@ function Navbar() {
               <img
                 src={logo}
                 alt="BookNest Logo"
-                className="h-12 w-12 object-contain rounded-full"
+                className="object-contain w-12 h-12 rounded-full"
               />
             </div>
 
@@ -81,25 +81,25 @@ function Navbar() {
           {/* =====================================================
               DESKTOP NAVIGATION
           ====================================================== */}
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="items-center hidden gap-8 lg:flex">
 
             <Link
               to="/"
-              className="text-sm font-semibold text-slate-900 transition hover:text-slate-600"
+              className="text-sm font-semibold transition text-slate-900 hover:text-slate-600"
             >
               Home
             </Link>
 
                 <Link
   to="/about"
-  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+  className="text-sm font-medium transition text-slate-500 hover:text-slate-900"
 >
   About
 </Link>
 
             <Link
               to="/books"
-              className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+              className="text-sm font-medium transition text-slate-500 hover:text-slate-900"
             >
               Books
             </Link>
@@ -107,7 +107,7 @@ function Navbar() {
             <Link
   to="/categories"
   onClick={closeMobileMenu}
-  className="text-sm font-medium text-slate-500 transition hover:text-slate-900"
+  className="text-sm font-medium transition text-slate-500 hover:text-slate-900"
 >
   Categories
 </Link>
@@ -118,7 +118,7 @@ function Navbar() {
           {/* =====================================================
               DESKTOP ACTIONS
           ====================================================== */}
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="items-center hidden gap-1 lg:flex">
 
             {/* Search Button */}
             <button
@@ -212,7 +212,7 @@ function Navbar() {
                 setMobileMenuOpen(!mobileMenuOpen)
               }
               aria-label="Open menu"
-              className="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100"
+              className="p-2 transition rounded-lg text-slate-700 hover:bg-slate-100"
             >
               {mobileMenuOpen ? (
                 <X size={23} />
@@ -227,14 +227,14 @@ function Navbar() {
             DESKTOP SEARCH BAR
         ====================================================== */}
         {searchOpen && (
-          <div className="hidden border-t border-slate-100 py-4 lg:block">
+          <div className="hidden py-4 border-t border-slate-100 lg:block">
             <form
               onSubmit={handleSearch}
-              className="relative mx-auto max-w-2xl"
+              className="relative max-w-2xl mx-auto"
             >
               <Search
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
 
               <input
@@ -253,7 +253,7 @@ function Navbar() {
             MOBILE MENU
         ====================================================== */}
         {mobileMenuOpen && (
-          <div className="border-t border-slate-100 py-5 lg:hidden">
+          <div className="py-5 border-t border-slate-100 lg:hidden">
 
             {/* Mobile Search */}
             <form
@@ -262,7 +262,7 @@ function Navbar() {
             >
               <Search
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
 
               <input
@@ -281,7 +281,7 @@ function Navbar() {
               <Link
                 to="/"
                 onClick={closeMobileMenu}
-                className="block rounded-xl px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50"
+                className="block px-4 py-3 text-sm font-semibold transition rounded-xl text-slate-900 hover:bg-slate-50"
               >
                 Home
               </Link>
@@ -290,16 +290,16 @@ function Navbar() {
               <Link
                 to="/books"
                 onClick={closeMobileMenu}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+                className="block px-4 py-3 text-sm font-medium transition rounded-xl text-slate-600 hover:bg-slate-50"
               >
                 Books
               </Link>
 
               {/* Categories */}
               <Link
-                to="/#categories"
+                to="/categories"
                 onClick={closeMobileMenu}
-                className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+                className="block px-4 py-3 text-sm font-medium transition rounded-xl text-slate-600 hover:bg-slate-50"
               >
                 Categories
               </Link>
@@ -308,7 +308,7 @@ function Navbar() {
              <Link
   to="/about"
   onClick={closeMobileMenu}
-  className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+  className="block px-4 py-3 text-sm font-medium transition rounded-xl text-slate-600 hover:bg-slate-50"
 >
   About
 </Link>
@@ -317,7 +317,7 @@ function Navbar() {
               <Link
                 to="/wishlist"
                 onClick={closeMobileMenu}
-                className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+                className="flex items-center justify-between px-4 py-3 text-sm font-medium transition rounded-xl text-slate-600 hover:bg-slate-50"
               >
                 <span className="flex items-center gap-3">
                   <Heart
@@ -343,7 +343,7 @@ function Navbar() {
               <Link
                 to="/cart"
                 onClick={closeMobileMenu}
-                className="flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition hover:bg-slate-50"
+                className="flex items-center justify-between px-4 py-3 text-sm font-medium transition rounded-xl text-slate-600 hover:bg-slate-50"
               >
                 <span className="flex items-center gap-3">
                   <ShoppingBag size={18} />

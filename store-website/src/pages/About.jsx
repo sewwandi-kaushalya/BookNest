@@ -18,9 +18,9 @@ function About() {
           HERO
       ====================================================== */}
 
-      <section className="border-b border-slate-200 bg-white">
+      <section className="bg-white border-b border-slate-200">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:px-8 lg:py-20">
+        <div className="grid items-center gap-12 px-5 py-16 mx-auto max-w-7xl lg:grid-cols-2 lg:px-8 lg:py-20">
 
           {/* Left */}
           <div>
@@ -36,14 +36,14 @@ function About() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-7 text-slate-500 sm:text-lg">
+            <p className="max-w-xl mt-6 text-base leading-7 text-slate-500 sm:text-lg">
               BookNest is a modern online bookstore created
               for people who believe that a good book can
               inspire, educate, and change the way we see
               the world.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mt-8">
 
               <Link
                 to="/books"
@@ -67,13 +67,13 @@ function About() {
           {/* Right Visual */}
           <div className="relative flex min-h-[400px] items-center justify-center">
 
-            <div className="absolute h-[300px] w-[300px] rounded-full bg-[#383837] sm:h-[380px] sm:w-[380px]"></div>
+            <div className="absolute h-[300px] w-[300px] rounded-full bg-[#fdfdfd] sm:h-[380px] sm:w-[380px]"></div>
 <img src={aboutImage}
               alt="About BookNest"
               className="relative z-10 h-[300px] w-[300px] rounded-full object-cover sm:h-[380px] sm:w-[380px]"
             />
             {/* Main Book */}
-            {/* <div className="relative z-10 w-56 -rotate-6 rounded-lg bg-slate-950 p-6 shadow-2xl sm:w-64">
+            {/* <div className="relative z-10 w-56 p-6 rounded-lg shadow-2xl -rotate-6 bg-slate-950 sm:w-64">
 
               <div className="flex aspect-[3/4] flex-col justify-between border border-white/20 p-5">
 
@@ -90,7 +90,7 @@ function About() {
                 </div>
 
                 <div>
-                  <div className="mb-3 h-px bg-white/20"></div>
+                  <div className="h-px mb-3 bg-white/20"></div>
 
                   <p className="text-xs text-white/50">
                     Stories. Knowledge. Inspiration.
@@ -102,7 +102,7 @@ function About() {
             </div> */}
 
             {/* Small Card */}
-            {/* <div className="absolute right-2 top-10 z-20 w-36 rotate-12 rounded-xl bg-white p-4 shadow-xl sm:right-10 sm:w-40">
+            {/* <div className="absolute z-20 p-4 bg-white shadow-xl right-2 top-10 w-36 rotate-12 rounded-xl sm:right-10 sm:w-40">
 
               <div className="flex aspect-square flex-col justify-center rounded-lg bg-[#e9e4db] p-4">
 
@@ -124,7 +124,7 @@ function About() {
             </div> */}
 
             {/* Floating Badge */}
-            <div className="absolute bottom-8 left-2 z-30 rounded-2xl bg-white px-5 py-4 shadow-xl sm:left-8">
+            <div className="absolute z-30 px-5 py-4 bg-white shadow-xl bottom-8 left-2 rounded-2xl sm:left-8">
 
               <div className="flex items-center gap-2">
 
@@ -157,7 +157,7 @@ function About() {
 
       <section className="bg-[#f6f3ee] px-5 py-20 lg:px-8">
 
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid gap-12 mx-auto max-w-7xl lg:grid-cols-2 lg:gap-20">
 
           {/* Heading */}
           <div>
@@ -208,7 +208,7 @@ function About() {
           VALUES
       ====================================================== */}
 
-      <section className="bg-white px-5 py-20 lg:px-8">
+      <section className="px-5 py-20 bg-white lg:px-8">
 
         <div className="mx-auto max-w-7xl">
 
@@ -227,16 +227,16 @@ function About() {
 
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="grid gap-5 mt-12 md:grid-cols-3">
 
             {/* Value 1 */}
             <div className="rounded-3xl border border-slate-200 bg-[#faf9f7] p-7">
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-700 shadow-sm">
+              <div className="flex items-center justify-center w-12 h-12 bg-white shadow-sm rounded-2xl text-slate-700">
                 <BookOpen size={22} />
               </div>
 
-              <h3 className="mt-7 text-xl font-bold text-slate-900">
+              <h3 className="text-xl font-bold mt-7 text-slate-900">
                 Discover
               </h3>
 
@@ -251,11 +251,11 @@ function About() {
             {/* Value 2 */}
             <div className="rounded-3xl border border-slate-200 bg-[#faf9f7] p-7">
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-700 shadow-sm">
+              <div className="flex items-center justify-center w-12 h-12 bg-white shadow-sm rounded-2xl text-slate-700">
                 <Heart size={22} />
               </div>
 
-              <h3 className="mt-7 text-xl font-bold text-slate-900">
+              <h3 className="text-xl font-bold mt-7 text-slate-900">
                 Connect
               </h3>
 
@@ -270,11 +270,11 @@ function About() {
             {/* Value 3 */}
             <div className="rounded-3xl border border-slate-200 bg-[#faf9f7] p-7">
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-slate-700 shadow-sm">
+              <div className="flex items-center justify-center w-12 h-12 bg-white shadow-sm rounded-2xl text-slate-700">
                 <Sparkles size={22} />
               </div>
 
-              <h3 className="mt-7 text-xl font-bold text-slate-900">
+              <h3 className="text-xl font-bold mt-7 text-slate-900">
                 Grow
               </h3>
 
@@ -297,7 +297,7 @@ function About() {
 
       <section className="bg-[#f6f3ee] px-5 py-20 lg:px-8">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-12 mx-auto max-w-7xl lg:grid-cols-2 lg:gap-20">
 
           {/* Left */}
           <div>
@@ -313,7 +313,7 @@ function About() {
               </span>
             </h2>
 
-            <p className="mt-5 max-w-xl text-sm leading-7 text-slate-500">
+            <p className="max-w-xl mt-5 text-sm leading-7 text-slate-500">
               We keep the experience simple so you can
               spend less time searching and more time
               discovering books you actually want to read.
@@ -322,13 +322,13 @@ function About() {
           </div>
 
           {/* Right */}
-          <div className="rounded-3xl bg-white p-7 shadow-sm sm:p-9">
+          <div className="bg-white shadow-sm rounded-3xl p-7 sm:p-9">
 
             <div className="space-y-6">
 
               <div className="flex gap-4">
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-950 text-white">
+                <div className="flex items-center justify-center text-white rounded-full h-9 w-9 shrink-0 bg-slate-950">
                   <Check size={17} />
                 </div>
 
@@ -347,7 +347,7 @@ function About() {
 
               <div className="flex gap-4">
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-950 text-white">
+                <div className="flex items-center justify-center text-white rounded-full h-9 w-9 shrink-0 bg-slate-950">
                   <Check size={17} />
                 </div>
 
@@ -366,7 +366,7 @@ function About() {
 
               <div className="flex gap-4">
 
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-950 text-white">
+                <div className="flex items-center justify-center text-white rounded-full h-9 w-9 shrink-0 bg-slate-950">
                   <Check size={17} />
                 </div>
 
@@ -395,9 +395,9 @@ function About() {
           STATS
       ====================================================== */}
 
-      <section className="bg-slate-950 px-5 py-16 lg:px-8">
+      <section className="px-5 py-16 bg-slate-950 lg:px-8">
 
-        <div className="mx-auto grid max-w-5xl gap-8 text-center sm:grid-cols-3">
+        <div className="grid max-w-5xl gap-8 mx-auto text-center sm:grid-cols-3">
 
           <div>
             <p className="text-4xl font-bold text-white">
@@ -437,11 +437,11 @@ function About() {
           FINAL CTA
       ====================================================== */}
 
-      <section className="bg-white px-5 py-20 lg:px-8">
+      <section className="px-5 py-20 bg-white lg:px-8">
 
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
 
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100 text-slate-700">
+          <div className="flex items-center justify-center mx-auto h-14 w-14 rounded-2xl bg-slate-100 text-slate-700">
             <Users size={24} />
           </div>
 
@@ -452,7 +452,7 @@ function About() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-500">
+          <p className="max-w-xl mx-auto mt-4 text-sm leading-6 text-slate-500">
             Explore our collection and discover a book
             that belongs on your reading list.
           </p>

@@ -65,22 +65,22 @@ function CategoriesPage() {
           HERO
       ====================================================== */}
 
-      <section className="border-b border-slate-200 bg-white">
+      <section className="bg-white border-b border-slate-200">
 
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="px-5 py-16 mx-auto max-w-7xl lg:px-8 lg:py-20">
 
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
             Explore BookNest
           </p>
 
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
             Find books that match
             <span className="block text-slate-500">
               your interests.
             </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+          <p className="max-w-2xl mt-6 text-base leading-7 text-slate-500 sm:text-lg">
             Explore our collection by category and discover
             books selected for curious minds, passionate
             readers, and lifelong learners.
@@ -93,7 +93,7 @@ function CategoriesPage() {
           CATEGORIES
       ====================================================== */}
 
-      <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+      <section className="px-5 py-16 mx-auto max-w-7xl lg:px-8 lg:py-20">
 
         <div className="mb-10">
 
@@ -105,7 +105,7 @@ function CategoriesPage() {
             Explore by category
           </h2>
 
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-500">
+          <p className="max-w-2xl mt-3 text-sm leading-6 text-slate-500">
             Choose a category and find books that fit your
             interests and reading goals.
           </p>
@@ -127,16 +127,16 @@ function CategoriesPage() {
                 to={`/books?category=${encodeURIComponent(
                   category.name
                 )}`}
-                className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-950"
+                className="relative overflow-hidden transition duration-300 bg-white border group rounded-3xl border-slate-200 p-7 hover:-translate-y-1 hover:border-slate-900 hover:bg-slate-950"
               >
 
                 {/* Icon */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-700 transition group-hover:bg-white/10 group-hover:text-white">
+                <div className="flex items-center justify-center w-12 h-12 transition rounded-2xl bg-slate-100 text-slate-700 group-hover:bg-white/10 group-hover:text-white">
                   <Icon size={22} />
                 </div>
 
                 {/* Category Name */}
-                <h3 className="mt-7 text-xl font-bold text-slate-900 transition group-hover:text-white">
+                <h3 className="text-xl font-bold transition mt-7 text-slate-900 group-hover:text-white">
                   {category.name}
                 </h3>
 
@@ -146,7 +146,7 @@ function CategoriesPage() {
                 </p>
 
                 {/* Bottom */}
-                <div className="mt-7 flex items-center justify-between border-t border-slate-100 pt-5 transition group-hover:border-white/10">
+                <div className="flex items-center justify-between pt-5 transition border-t mt-7 border-slate-100 group-hover:border-white/10">
 
                   <span className="text-xs font-medium text-slate-400 group-hover:text-slate-400">
                     {bookCount}{" "}
@@ -155,7 +155,7 @@ function CategoriesPage() {
                       : "books"}
                   </span>
 
-                  <span className="flex items-center gap-2 text-sm font-semibold text-slate-900 transition group-hover:text-white">
+                  <span className="flex items-center gap-2 text-sm font-semibold transition text-slate-900 group-hover:text-white">
                     Explore
                     <ArrowRight
                       size={16}
@@ -177,9 +177,9 @@ function CategoriesPage() {
           ALL BOOKS CTA
       ====================================================== */}
 
-      <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8">
+      <section className="px-5 pb-20 mx-auto max-w-7xl lg:px-8">
 
-        <div className="overflow-hidden rounded-3xl bg-slate-950 px-7 py-12 text-center sm:px-12">
+        <div className="py-12 overflow-hidden text-center rounded-3xl bg-slate-950 px-7 sm:px-12">
 
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
             Can't decide?
@@ -189,7 +189,7 @@ function CategoriesPage() {
             Explore the complete collection.
           </h2>
 
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-400">
+          <p className="max-w-xl mx-auto mt-4 text-sm leading-6 text-slate-400">
             Browse all available books and find something
             that catches your attention.
           </p>

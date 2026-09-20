@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { UserRound, Mail, Lock, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.jpg";
 
 function Register() {
   const navigate = useNavigate();
@@ -33,16 +34,20 @@ function Register() {
 
   return (
     <div className="min-h-[80vh] bg-[#f6f3ee] px-5 py-16">
-      <div className="mx-auto max-w-xl rounded-3xl bg-white p-7 shadow-sm sm:p-10">
+      <div className="max-w-xl mx-auto bg-white shadow-sm rounded-3xl p-7 sm:p-10">
         
         {/* Logo */}
         <div className="flex justify-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-xl">
-            📚
+          <div className="flex items-center justify-center w-12 h-12 text-xl rounded-xl">
+            <img
+                  src={logo}
+                  alt="BookNest Logo"
+                  className="object-contain w-full h-full rounded-full"
+                />
           </div>
         </div>
 
-        <div className="mx-auto mt-7 max-w-md text-center">
+        <div className="max-w-md mx-auto text-center mt-7">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
             Join BookNest
           </p>
@@ -56,17 +61,17 @@ function Register() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="mx-auto mt-8 max-w-md space-y-5">
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 space-y-5">
           {/* Name */}
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="block mb-2 text-sm font-medium text-slate-700">
               Full Name
             </label>
 
             <div className="relative">
               <UserRound
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
               <input
                 type="text"
@@ -82,14 +87,14 @@ function Register() {
 
           {/* Email */}
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="block mb-2 text-sm font-medium text-slate-700">
               Email Address
             </label>
 
             <div className="relative">
               <Mail
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
               <input
                 type="email"
@@ -105,14 +110,14 @@ function Register() {
 
           {/* Password */}
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="block mb-2 text-sm font-medium text-slate-700">
               Password
             </label>
 
             <div className="relative">
               <Lock
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
               <input
                 type="password"
@@ -129,14 +134,14 @@ function Register() {
 
           {/* Confirm Password */}
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
+            <label className="block mb-2 text-sm font-medium text-slate-700">
               Confirm Password
             </label>
 
             <div className="relative">
               <Lock
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+                className="absolute -translate-y-1/2 left-4 top-1/2 text-slate-400"
               />
               <input
                 type="password"
@@ -155,7 +160,7 @@ function Register() {
             <input
               type="checkbox"
               required
-              className="mt-1 h-4 w-4 shrink-0 rounded border-slate-300"
+              className="w-4 h-4 mt-1 rounded shrink-0 border-slate-300"
             />
             <span>I agree to the BookNest terms and conditions.</span>
           </label>
@@ -171,7 +176,7 @@ function Register() {
         </form>
 
         {/* Login */}
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-sm text-center text-slate-500">
           Already have an account?{" "}
           <Link
             to="/login"
